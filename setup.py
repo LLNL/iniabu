@@ -7,10 +7,10 @@ with open('README.md', encoding='utf-8') as f:
 #
 setup(
     name='iniabu',
-    version='0.2.3',
+    version='0.3.0',
     packages=[''],
-    url='https://github.com/trappitsch/iniabu',
-    license='',
+    url='https://github.com/LLNL/iniabu',
+    license='GPL-2.0',
     author='Reto Trappitsch',
     author_email='trappitsch1@llnl.gov',
     description='Solar System initial isotopic abundance reader.',
@@ -20,5 +20,11 @@ setup(
     data_files=[('iniabu_data', ['iniabu/iniabu_data/lodders09.dat'])],
     # the script to install
     scripts=['iniabu/iniabu.py'],
-    install_requires=['numpy', 'sys']
+    install_requires=['numpy'],
+    # classifiers
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: OS Independent",
+    ]
 )

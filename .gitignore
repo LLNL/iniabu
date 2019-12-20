@@ -1,4 +1,4 @@
 cleanall
 dist
-dist/*
+.idea
 PyPi_release_instructions.md

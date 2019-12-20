@@ -275,9 +275,9 @@ class IniAbu:
         # parse input if given as string
         if type(iso) == str:
             # remove spaces, dashes, and underlines - to deal with various user input
-            iso.replace(' ', '')
-            iso.replace('-', '')
-            iso.replace('_', '')
+            iso = str(iso.replace(' ', ''))
+            iso = str(iso.replace('-', ''))
+            iso = str(iso.replace('_', ''))
             # now parse the input
             for it in range(len(iso)):
                 try:
@@ -401,10 +401,9 @@ def _err_notfound(errname):
     :param errname:     <str> Name of what element was not found
     :return:            None, just raise an error
     """
-    sys.exit('ERROR: Could not find the element ' + errname)
+    sys.exit('ERROR: Could not find ' + errname)
 
 
 # Call if main
 if __name__ == "__main__":
     i = IniAbu()
-

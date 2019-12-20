@@ -2,7 +2,7 @@
 This package can be used to query the solar system elemental and
 isotopic composition. It is based on various databases. Currently
 available databases are
- * [Lodders et al. (2009)](https://doi.org/10.1007/978-3-540-88055-4_34){:target="_blank"}
+ * [Lodders et al. (2009)](https://doi.org/10.1007/978-3-540-88055-4_34)
 
 ## Installation
 The package can be installed via pip
@@ -45,7 +45,7 @@ to give the program an isotope is by passing a string, e.g.,
 be found by calling:
 
     measurement_value = 0.05
-    iniabu.delta_iso(measurement_value, 'Si-29', 'Si-28')
+    ini.delta_iso(measurement_value, 'Si-29', 'Si-28')
 
 Here, measurement_value is the measured value for which a
 delta value comparing it to the Solar System average composition
@@ -123,6 +123,16 @@ python class file. If you are using ipython, you can query
 individual commands, e.g., as:
 
     ini.delta_iso?
+
+## Contact
+Feel free to contact me if you find a bug and would like to have
+it fixed. You can find my e-mail address below. 
+
+Please also let me know if you would like to have additional
+functionality added. I don't expect you to contribute directly 
+to this code, but please feel free to do so and create a new pull
+request. Testing is all done manually at this point and I expect
+it it remain like that for the foreseeable future. Good luck :)
 
 ## Release
 
