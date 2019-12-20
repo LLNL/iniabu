@@ -1,0 +1,4 @@
+cleanall
+dist
+dist/*
+PyPi_release_instructions.md
