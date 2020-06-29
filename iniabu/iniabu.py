@@ -4,7 +4,7 @@ the user might need, such as abundances normed to various things, ratios, delta-
 the readme or the docstring for detailed instructions.
 """
 import numpy as np
-import sys
+import sys, os
 
 
 class IniAbu:
@@ -371,7 +371,9 @@ class IniAbu:
         localerr = False
         # find the global file from PyPi package
         try:
-            f = open(sys.prefix + '/iniabu_data/' + fname, 'r')
+            install_path = os.path.dirname(os.path.realpath(__file__))
+            full_fname = os.path.join(install_path, 'iniabu_data', fname)
+            f = open(full_fname, 'r')
             return f
         except FileNotFoundError:
             # all failed, give back None

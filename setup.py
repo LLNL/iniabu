@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # long description
 with open('README.md', encoding='utf-8') as f:
@@ -7,8 +7,7 @@ with open('README.md', encoding='utf-8') as f:
 #
 setup(
     name='iniabu',
-    version='0.3.0',
-    packages=[''],
+    version='0.3.1',
     url='https://github.com/LLNL/iniabu',
     license='GPL-2.0',
     author='Reto Trappitsch',
@@ -18,8 +17,12 @@ setup(
     long_description_content_type='text/markdown',
     # add the data files into the system folder
     data_files=[('iniabu_data', ['iniabu/iniabu_data/lodders09.dat'])],
-    # the script to install
-    scripts=['iniabu/iniabu.py'],
+    packages=find_packages(
+        include=["iniabu", "iniabu.*"]
+    ),  # include all packages under iniabu
+    package_data={
+        "": ["*.dat"],  # include data
+    },
     install_requires=['numpy'],
     # classifiers
     classifiers=[
