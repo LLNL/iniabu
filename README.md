@@ -1,3 +1,5 @@
+**THIS PROJECT HAS BEEN REPLACED AND IS THUS ARCHIVED. PLEASE SEE [HERE](https://github.com/galactic-forensics/iniabu) FOR THE NEW, COMPLETELY RE-WRITTEN VERSION**
+
 # iniabu
 This package can be used to query the solar system elemental and
 isotopic composition. It is based on various databases. Currently
